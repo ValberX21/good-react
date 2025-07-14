@@ -1,63 +1,97 @@
-.App {
-  text-align: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 5px;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #61dafb;
-  border-radius: 4px;
-  margin-top: 20px;
-}
-
-.App-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #61dafb;
-  color: #282c34;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.App-button:hover {
-  background-color: #21a1f1;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section {
+  background-color: #121212;
+  border-radius: 25px;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.red { border: 3px solid red; }
+.blue { border: 3px solid deepskyblue; }
+.white { border: 3px solid white; }
+.yellow { border: 3px solid yellow; }
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.register-form-container {
+  background-color: #0f111a;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-form-container h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #cccccc;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.form-group input {
+  background-color: #1e2235;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
   color: white;
+  font-size: 1rem;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+
+.register-form-container button {
+  margin-top: 20px;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.register-form-container button:hover {
+  background-color: #5750d3;
 }
